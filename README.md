@@ -79,6 +79,10 @@ ___
 [image32]: ./output_images/final_images/final_images_test6.jpg 
 
 [image33]: ./examples/perspective_transform.jpg 
+
+[image34]: ./output_images/r_Curve_formula.jpg
+[image35]: ./output_images/smag_formula.jpg
+
 ___
 
 ##  1 - Calibration Camera.
@@ -127,7 +131,11 @@ Here's a [link to more results](./output_images/Abs_Sobel) for Absolute Sobel gr
 ---
 ### 3.2 - Magnitude of the gradiente.
 
-Here was applied a threshold to the overall magnitude of the gradient with the function `cv2.Sobel()` in both x and y. and after calculated the Magnitude with the formula $ mag =\sqrt{sobelx^2+sobely^2+}$. The threshold to select pixels was 30 as minimun and 120 as maximum ( to keep comparison base with the others gradients), the results it is very clean, but in some cases it is not possible identify the lane lines. Below 2 examples of the results.
+Here was applied a threshold to the overall magnitude of the gradient with the function `cv2.Sobel()` in both x and y. and after calculated the Magnitude with the formula:
+
+![alt text][image35]
+
+The threshold to select pixels was 30 as minimun and 120 as maximum ( to keep comparison base with the others gradients), the results it is very clean, but in some cases it is not possible identify the lane lines. Below 2 examples of the results.
 
 ![alt text][image9]
 ![alt text][image10]
@@ -188,7 +196,7 @@ With the function`cv2.HoughLinesP()`, it was possible indetify and created lines
 
 ![alt text][image20]
 
-With the 4 coordinate points, it was defined the$Y_{upper} = 500pixels$ .with the derivative $\Delta$y/$\Delta$x , it was found the X coordinates for upper , lower for both lines. The picture below show the results.
+With the 4 coordinate points, it was defined Y_upper = 500pixels .with the derivative Dy/Dx , it was found the X coordinates for upper , lower for both lines. The picture below show the results.
 
 ---
 ![alt text][image21]
@@ -251,7 +259,8 @@ Here the main trick is convert the pixels in meters. With the lower coordinate p
 
 Using the coefficients [A, B, C] generated in the step to identify the polynomial curves, it is possible to calculate the radius of the curvature using the formula:
 
-$$  R_{curve} = \frac{(1+(2.A_{y}+B)^2)^\frac{3}{2}}{|2A|}$$
+![alt text][image34]
+
 
 If the left curvature is greather than the right means that the vehicle turn radius is to right, the opposite means the turn radius is to left.If the radius is greater than 1500m the vehicle is going straight
 
