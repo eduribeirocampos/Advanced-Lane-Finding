@@ -315,12 +315,3 @@ Below a quick overview regard the pipeline:
 -
 
 Here's a [link to my video result](./project_video_Edu.mp4)
-
-
-___
-### Discussion
-
-#### 1. Briefly discuss any problems / issues you faced in your implementation of this project.  Where will your pipeline likely fail?  What could you do to make it more robust?
-
-It was possible identify that the code does not calculate the radius correctly due some issues to detect the lane lines in some frames. I've tried work with a set of information and calculate the curves using a average of values  from previous frames, but the code does not run correctly. 
-
