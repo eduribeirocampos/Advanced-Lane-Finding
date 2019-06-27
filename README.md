@@ -1,9 +1,8 @@
 # Advanced-Lane-Finding
-Udacity - Self driving Car - Term 1 -  Project 2
+
+[![Udacity - Self-Driving Car NanoDegree](https://s3.amazonaws.com/udacity-sdc/github/shield-carnd.svg)](http://www.udacity.com/drive)
 
 # Self-Driving Car Engineer Nanodegree
-
-## Project2: ** Advanced Lane Lines  Finding on the Road** 
 
 The goals / steps of this project are the following:
 
